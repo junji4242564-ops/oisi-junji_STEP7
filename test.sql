@@ -82,11 +82,10 @@ LIMIT 1;
 -- 各商品が何回注文されたかを取得
 SELECT
     products.product_name,
-    COUNT(order_items.id) AS order_count
+    SUM(order_items.quantity) AS order_count
 FROM products
 LEFT JOIN order_items ON products.id = order_items.product_id
 GROUP BY products.id, products.product_name;
-
 
 -- 設問11
 -- 注文が1回もないユーザーを取得
