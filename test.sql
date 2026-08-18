@@ -194,14 +194,14 @@ GROUP BY users.id, users.name;
 
 -- 設問21
 -- 新規ユーザー「中村愛」をusersテーブルに追加
-INSERT INTO users (name, age, gender, created_at)
-VALUES ('中村愛', 25, 'female', '2025-06-01');
+INSERT INTO users (id,name, age, gender, created_at)
+VALUES (6,'中村愛', 25, 'female', '2025-06-01');
 
 
 -- 設問22
 -- 商品「エアコン（価格：60000円）」をproductsテーブルに追加
-INSERT INTO products (product_name, price)
-VALUES ('エアコン', 60000);
+INSERT INTO products (id, product_name, price)
+VALUES (6, 'エアコン', 60000);
 
 
 -- 設問23
